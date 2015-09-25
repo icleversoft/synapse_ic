@@ -1,4 +1,9 @@
+require 'rest_client'
+require 'json'
+
 require "synapse_ic/version"
+require 'synapse_ic/resources/user'
+require 'synapse_ic/client'
 
 module SynapseIc
   @api_base = "synapsepay.com/api/v3/"

@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors       = ["George Stavrou"]
   s.email         = ["iphone@icleversoft.com"]
   s.summary       = "A simple synapsepay client"
-  s.description   = "A simple synapsepay client"
+  s.description   = "Provides easy way to interact with the Synapse API"
   s.homepage      = ""
   s.license       = "MIT"
   
@@ -18,7 +18,15 @@ Gem::Specification.new do |s|
   
   s.add_development_dependency "bundler", "~> 1.7"
   s.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "rspec", "~> 3.3.0"
+  s.add_development_dependency "pry", "~> 0.10.1"
+  s.add_development_dependency "vcr", "~> 2.9.3"
+  s.add_development_dependency "webmock", "~> 1.21.0"
   
+  s.add_development_dependency "faraday", "~> 0.9.0"
+  s.add_development_dependency "faraday_middleware", "~> 0.10.0"
+  s.add_development_dependency "simple_oauth", "~> 0.3.1"
+
   s.files         = `git ls-files -z`.split("\x0")
   s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
