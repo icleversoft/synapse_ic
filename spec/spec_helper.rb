@@ -1,7 +1,7 @@
 require_relative "../lib/synapse_ic"
 require 'support/shared_config'
 require 'vcr'
-require File.join(File.dirname(__FILE__), 'fixtures/user_data')
+# require File.join(File.dirname(__FILE__), 'fixtures/user_data')
 
 VCR.configure do |c|
   c.cassette_library_dir = "spec/fixtures/vcr_cassettes"
