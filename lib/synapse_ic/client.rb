@@ -1,5 +1,6 @@
 module SynapseIc
   class Client 
+    
     def self.request( url, payload = {})
       res = nil
       res = RestClient.post( url,
