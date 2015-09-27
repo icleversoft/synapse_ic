@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.synapsepay.com/api/v3/user/create
+    body:
+      encoding: UTF-8
+      string: '{"logins":[{"email":"test@domain.com","password":"123456","read_only":"false"}],"phone_numbers":["123-123-123"],"legal_names":["Test
+        User"],"fingerprints":[{"fingerprint":"suasusau21324redakufejfjsf"}],"ips":["127.0.0.1"],"client":{"client_id":"e3f19e4bd4022c86e7f2","client_secret":"11c94ba6bad74d24a0158bc707f0fc19a86dc08f"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '327'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 27 Sep 2015 18:30:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Frame-Options:
+      - ALLOWALL
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"error_code": "0", "http_code": "200", "oauth": {"expires_at": "1448562629",
+        "expires_in": "5184000", "oauth_key": "PnlYSFaJfKmgXhVZYQteggMJEUmLnusA9qWCqr7m",
+        "refresh_token": "3EPBEFKpbuZ98uEHacfsLLDWHSQMkJsiXuivJKbn"}, "success": true,
+        "user": {"_id": {"$oid": "560835c586c27332ba40913f"}, "client": {"id": 844,
+        "name": "SynapsePay*Sandbox"}, "extra": {"date_joined": {"$date": 1443378628181},
+        "is_business": null, "supp_id": null}, "is_hidden": false, "legal_names":
+        ["Test User"], "logins": [{"email": "test@domain.com", "read_only": true}],
+        "permission": "UNVERIFIED", "phone_numbers": ["123-123-123"], "photos": []}}'
+    http_version: 
+  recorded_at: Sun, 27 Sep 2015 18:30:29 GMT
+recorded_with: VCR 2.9.3

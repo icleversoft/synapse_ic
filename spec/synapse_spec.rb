@@ -12,7 +12,7 @@ describe SynapseIc do
     
     it "base url should contain the right value" do
       expect(SynapseIc.base_url).to eq(env[:sandbox])
-      SynapseIc.dev = false
+      SynapseIc.prod = true
       expect(SynapseIc.base_url).to eq(env[:production])
     end
   end

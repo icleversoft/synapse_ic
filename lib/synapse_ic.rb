@@ -11,15 +11,15 @@ module SynapseIc
   
   class << self
     attr_accessor :client_id, :client_secret
-    attr_accessor :dev, :api_version
-    alias_method :dev?, :dev
+    attr_accessor :prod, :api_version
+    alias_method :prod?, :prod
   end
   
   def self.base_url
-    if dev.nil? || dev == true
-      "https://sandbox.#{@api_base}"
-    else
+    if prod == true
       "https://#{@api_base}"
+    else
+      "https://sandbox.#{@api_base}"
     end
   end
 end
