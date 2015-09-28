@@ -2,7 +2,9 @@ require 'rest_client'
 require 'json'
 
 require "synapse_ic/version"
+require 'synapse_ic/response'
 require 'synapse_ic/resources/user'
+require 'synapse_ic/resources/oauth'
 require 'synapse_ic/client'
 
 module SynapseIc

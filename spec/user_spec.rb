@@ -9,16 +9,29 @@ describe SynapseIc::User do
     SynapseIc.client_id = api_keys[:client_id]
     SynapseIc.client_secret = api_keys[:client_secret]
   end
-  it :should_create_a_synapse_user do
-    VCR.use_cassette("user/create") do
-      res = SynapseIc::User.create( "logins" => [{"email"=>"test@domain.com", 
-                                            "password" => "123456", 
-                                            "read_only" => "false"}], 
-                              "phone_numbers" => ["123-123-123"],
-                              "legal_names" => ["Test User"],
-                              "fingerprints" => [{"fingerprint" => "suasusau21324redakufejfjsf"} ],
-                              "ips" => ["127.0.0.1"] )
+  context :create_user_successfully do
+    let(:user) do
+      VCR.use_cassette("user/success/create") do
+        SynapseIc::User.create( valid_user )
+      end
     end
+    it :error_should_be_empty do
+      expect(user.error).to eq("")
+    end
+    
+    it :error_code_should_be_zero do
+      expect(user.error_code).to eq("0")
+    end
+    
+    it :creates_successfully_a_user do
+      expect( user.success).to eq(true)
+    end
+
+    it :user_is_actually_a_user_data_model do
+      expect(user).to be_an(SynapseIc::User)
+    end
+    
   end
+  
   
 end

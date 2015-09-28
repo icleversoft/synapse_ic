@@ -26,7 +26,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 27 Sep 2015 18:30:29 GMT
+      - Mon, 28 Sep 2015 19:07:28 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -41,14 +41,14 @@ http_interactions:
       - max-age=63072000
     body:
       encoding: UTF-8
-      string: '{"error_code": "0", "http_code": "200", "oauth": {"expires_at": "1448562629",
-        "expires_in": "5184000", "oauth_key": "PnlYSFaJfKmgXhVZYQteggMJEUmLnusA9qWCqr7m",
-        "refresh_token": "3EPBEFKpbuZ98uEHacfsLLDWHSQMkJsiXuivJKbn"}, "success": true,
-        "user": {"_id": {"$oid": "560835c586c27332ba40913f"}, "client": {"id": 844,
-        "name": "SynapsePay*Sandbox"}, "extra": {"date_joined": {"$date": 1443378628181},
+      string: '{"error_code": "0", "http_code": "200", "oauth": {"expires_at": "1448651248",
+        "expires_in": "5184000", "oauth_key": "3HiHegW1FW6whkFZJsMKI5BHhduGSb2eGKBBYuDt",
+        "refresh_token": "izG4OKcXptspGUBhobN854YaWSJCvSB5OlQ73gdX"}, "success": true,
+        "user": {"_id": {"$oid": "56098ff086c27349abd8b434"}, "client": {"id": 844,
+        "name": "SynapsePay*Sandbox"}, "extra": {"date_joined": {"$date": 1443467248136},
         "is_business": null, "supp_id": null}, "is_hidden": false, "legal_names":
         ["Test User"], "logins": [{"email": "test@domain.com", "read_only": true}],
         "permission": "UNVERIFIED", "phone_numbers": ["123-123-123"], "photos": []}}'
     http_version: 
-  recorded_at: Sun, 27 Sep 2015 18:30:29 GMT
+  recorded_at: Mon, 28 Sep 2015 19:07:28 GMT
 recorded_with: VCR 2.9.3
