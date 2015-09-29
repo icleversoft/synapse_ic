@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.synapsepay.com/api/v3/user/create
+    body:
+      encoding: UTF-8
+      string: '{"logins":[{"email":"test@domain.com","password":"123456","read_only":false}],"phone_numbers":["123-456-789"],"fingerprints":[{"fingerprint":"suasusau21324redakufejfjsf"}],"ips":["192.168.0.1"],"client":{"client_id":"e3f19e4bd4022c86e7f2","client_secret":"11c94ba6bad74d24a0158bc707f0fc19a86dc08f"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '299'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 29 Sep 2015 16:55:55 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Frame-Options:
+      - ALLOWALL
+    body:
+      encoding: UTF-8
+      string: '{"error": {"en": "KeyError: ''legal_names''. Explanation: Adding/Removing
+        this key should resolve this error."}, "error_code": "200", "http_code": "400",
+        "success": false}'
+    http_version: 
+  recorded_at: Tue, 29 Sep 2015 16:55:55 GMT
+recorded_with: VCR 2.9.3

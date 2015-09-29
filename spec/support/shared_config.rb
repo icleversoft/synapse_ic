@@ -12,4 +12,12 @@ shared_context "shared configuration" do
          ips: ["192.168.0.1"]
       ]
   end
+
+  let(:invalid_user) do
+    Hash[logins: [{email:"test@domain.com", password: '123456', read_only: false}],
+         phone_numbers: ["123-456-789"],
+         fingerprints: [{fingerprint: "suasusau21324redakufejfjsf"}],
+         ips: ["192.168.0.1"]
+      ]
+  end
 end
