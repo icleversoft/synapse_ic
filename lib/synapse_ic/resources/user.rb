@@ -1,5 +1,6 @@
 module SynapseIc
   class User < Response
+
     class << self
       def create( params = {} )
         url = SynapseIc.base_url + "user/create"
@@ -16,11 +17,13 @@ module SynapseIc
         end
       end 
     end
-    attr_reader :oath
+
+    attr_reader :oauth, :permission
     def initialize( response = {})
       super( response )
-      @oath_key = ""
-      @oath = Oauth.new( response["oauth"] )
+      @oauth = Oauth.new( response["oauth"] )
+      @permission = response["user"]["permission"]
     end
+
   end
 end

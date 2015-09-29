@@ -15,6 +15,7 @@ describe SynapseIc::User do
         SynapseIc::User.create( valid_user )
       end
     end
+    
     it :error_should_be_empty do
       expect(user.error).to eq("")
     end
@@ -30,7 +31,22 @@ describe SynapseIc::User do
     it :user_is_actually_a_user_data_model do
       expect(user).to be_an(SynapseIc::User)
     end
+
+    context :permission do
+      subject{user.permission}
+      
+      it{should_not be_empty}
+      it{should match(/(UNVERIFIED|RECEIVE|LOCKED|SEND\-AND\-RECEIVE)/)}
+    end
     
+    context :oauth do
+      subject{user.oauth}
+      
+      it {should be_a(SynapseIc::Oauth) }
+      its(:expires_at){ should be_a(Time) }
+      its(:oauth_key){ should_not be_empty }
+      its(:refresh_token){ should_not be_empty }
+    end
   end
   
   

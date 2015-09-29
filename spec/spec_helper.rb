@@ -1,5 +1,6 @@
 require_relative "../lib/synapse_ic"
 require 'support/shared_config'
+require 'rspec/its'
 require 'vcr'
 # require File.join(File.dirname(__FILE__), 'fixtures/user_data')
 

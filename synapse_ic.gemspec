@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "bundler", "~> 1.7"
   s.add_development_dependency "rake", "~> 10.0"
   s.add_development_dependency "rspec", "~> 3.3.0"
+  s.add_development_dependency 'rspec-its', '~> 1.2.0'
   s.add_development_dependency "pry", "~> 0.10.1"
   s.add_development_dependency "vcr", "~> 2.9.3"
   s.add_development_dependency "webmock", "~> 1.21.0"

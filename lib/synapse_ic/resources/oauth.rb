@@ -1,5 +1,6 @@
 module SynapseIc
   class Oauth
+    attr_reader :expires_at, :oauth_key, :refresh_token
     def initialize( data = {} )
       @expires_at = nil
       @oauth_key = ""
