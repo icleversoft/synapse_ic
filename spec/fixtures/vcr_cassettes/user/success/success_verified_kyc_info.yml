@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.synapsepay.com/api/v3/user/doc/add
+    body:
+      encoding: UTF-8
+      string: '{"login":{"oauth_key":"9XrejAkBmzYpBwgKMigK8peO3ADXRyEdkE26i6Ct"},"user":{"doc":{"birth_day":4,"birth_month":2,"birth_year":1940,"name_first":"John","name_last":"doe","address_street1":"1
+        Infinate Loop","address_postal_code":"95014","address_country_code":"US","document_value":"2222","document_type":"SSN"},"fingerprint":"suasusau21324redakufejfjsf"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '352'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 30 Sep 2015 07:24:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Frame-Options:
+      - ALLOWALL
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"error_code": "0", "http_code": "200", "message": {"en": "SSN information
+        verified"}, "success": true, "user": {"_id": {"$oid": "560b89fa86c27328e47e7c32"},
+        "client": {"id": 844, "name": "SynapsePay*Sandbox"}, "extra": {"date_joined":
+        {"$date": 1443596793356}, "is_business": null, "supp_id": null}, "is_hidden":
+        false, "legal_names": ["Test User"], "logins": [{"email": "test@domain.com",
+        "read_only": false}], "permission": "RECEIVE", "phone_numbers": ["123-456-789"],
+        "photos": []}}'
+    http_version: 
+  recorded_at: Wed, 30 Sep 2015 07:24:05 GMT
+recorded_with: VCR 2.9.3

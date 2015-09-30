@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.synapsepay.com/api/v3/user/doc/add
+    body:
+      encoding: UTF-8
+      string: '{"login":{"oauth_key":"9XrejAkBmzYpBwgKMigK8peO3ADXRyEdkE26i6Ct"},"user":{"doc":{"birth_day":4,"birth_month":2,"birth_year":1940,"name_first":"John","name_last":"doe","address_street1":"1
+        Infinate Loop","address_postal_code":"95014","address_country_code":"US","document_value":"1111","document_type":"SSN"},"fingerprint":"suasusau21324redakufejfjsf"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '352'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 409
+      message: CONFLICT
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 30 Sep 2015 07:28:00 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Frame-Options:
+      - ALLOWALL
+    body:
+      encoding: UTF-8
+      string: '{"error": {"en": "Invalid SSN information supplied. Please submit a
+        copy of passport/divers license via user/doc/attachments/add"}, "error_code":
+        "400", "http_code": "409", "success": false}'
+    http_version: 
+  recorded_at: Wed, 30 Sep 2015 07:28:00 GMT
+recorded_with: VCR 2.9.3

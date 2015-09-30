@@ -10,10 +10,7 @@ module SynapseIc
                              accept: :json)
       res = res.body
       rescue => e
-        res = {"error" => {"en" => e.message},
-               "error_code" => -1,
-               "http_code" => 500,
-               "success" => false}.to_json
+        res = e.response
       res
     end
   end

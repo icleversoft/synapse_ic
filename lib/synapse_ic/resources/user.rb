@@ -25,5 +25,18 @@ module SynapseIc
       @permission = response["user"]["permission"]
     end
 
+    def add_kyc_info( info = {}, fingerprint )
+      url = SynapseIc.base_url + "user/doc/add"
+
+      user_doc = {doc: info}.merge(fingerprint)
+      payload = {login: {oauth_key: @oauth.oauth_key},
+                 user: user_doc}
+      response = JSON.parse( Client.request( url, payload ) )
+      if response.has_key? "error"
+        Response.new( response )
+      else
+        KYC.new( response )
+      end
+    end
   end
 end

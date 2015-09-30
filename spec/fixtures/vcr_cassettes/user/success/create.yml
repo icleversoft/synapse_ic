@@ -5,8 +5,8 @@ http_interactions:
     uri: https://sandbox.synapsepay.com/api/v3/user/create
     body:
       encoding: UTF-8
-      string: '{"logins":[{"email":"test@domain.com","password":"123456","read_only":"false"}],"phone_numbers":["123-123-123"],"legal_names":["Test
-        User"],"fingerprints":[{"fingerprint":"suasusau21324redakufejfjsf"}],"ips":["127.0.0.1"],"client":{"client_id":"e3f19e4bd4022c86e7f2","client_secret":"11c94ba6bad74d24a0158bc707f0fc19a86dc08f"}}'
+      string: '{"logins":[{"email":"test@domain.com","password":"123456","read_only":false}],"phone_numbers":["123-456-789"],"legal_names":["Test
+        User"],"fingerprints":[{"fingerprint":"suasusau21324redakufejfjsf"}],"ips":["192.168.0.1"],"client":{"client_id":"e3f19e4bd4022c86e7f2","client_secret":"11c94ba6bad74d24a0158bc707f0fc19a86dc08f"}}'
     headers:
       Accept:
       - application/json
@@ -26,7 +26,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 28 Sep 2015 19:07:28 GMT
+      - Wed, 30 Sep 2015 07:06:34 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -41,14 +41,14 @@ http_interactions:
       - max-age=63072000
     body:
       encoding: UTF-8
-      string: '{"error_code": "0", "http_code": "200", "oauth": {"expires_at": "1448651248",
-        "expires_in": "5184000", "oauth_key": "3HiHegW1FW6whkFZJsMKI5BHhduGSb2eGKBBYuDt",
-        "refresh_token": "izG4OKcXptspGUBhobN854YaWSJCvSB5OlQ73gdX"}, "success": true,
-        "user": {"_id": {"$oid": "56098ff086c27349abd8b434"}, "client": {"id": 844,
-        "name": "SynapsePay*Sandbox"}, "extra": {"date_joined": {"$date": 1443467248136},
+      string: '{"error_code": "0", "http_code": "200", "oauth": {"expires_at": "1448780794",
+        "expires_in": "5184000", "oauth_key": "9XrejAkBmzYpBwgKMigK8peO3ADXRyEdkE26i6Ct",
+        "refresh_token": "mORJPReZeOGBFH9QfqotwHyD3jmF1oPMlZJAlPlc"}, "success": true,
+        "user": {"_id": {"$oid": "560b89fa86c27328e47e7c32"}, "client": {"id": 844,
+        "name": "SynapsePay*Sandbox"}, "extra": {"date_joined": {"$date": 1443596793356},
         "is_business": null, "supp_id": null}, "is_hidden": false, "legal_names":
-        ["Test User"], "logins": [{"email": "test@domain.com", "read_only": true}],
-        "permission": "UNVERIFIED", "phone_numbers": ["123-123-123"], "photos": []}}'
+        ["Test User"], "logins": [{"email": "test@domain.com", "read_only": false}],
+        "permission": "UNVERIFIED", "phone_numbers": ["123-456-789"], "photos": []}}'
     http_version: 
-  recorded_at: Mon, 28 Sep 2015 19:07:28 GMT
+  recorded_at: Wed, 30 Sep 2015 07:06:34 GMT
 recorded_with: VCR 2.9.3

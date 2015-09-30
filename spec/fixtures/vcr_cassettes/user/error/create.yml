@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 29 Sep 2015 16:55:55 GMT
+      - Wed, 30 Sep 2015 07:06:36 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -42,5 +42,5 @@ http_interactions:
         this key should resolve this error."}, "error_code": "200", "http_code": "400",
         "success": false}'
     http_version: 
-  recorded_at: Tue, 29 Sep 2015 16:55:55 GMT
+  recorded_at: Wed, 30 Sep 2015 07:06:36 GMT
 recorded_with: VCR 2.9.3
