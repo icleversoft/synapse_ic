@@ -35,7 +35,8 @@ module SynapseIc
       if response.has_key? "error"
         Response.new( response )
       else
-        KYC.new( response )
+        d = KYC.new( response )
+        # p d.inspect
       end
     end
   end

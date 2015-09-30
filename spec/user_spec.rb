@@ -61,7 +61,8 @@ describe SynapseIc::User do
             user.add_kyc_info( success_kyc_info, fingerprint )
           end
         end
-      
+        
+        its(:error_code){should eq("0")}
         it{should be_a(SynapseIc::KYC)}
         its(:message){should match(/SSN information verified/)}
         its(:permission){should match(/RECEIVE/)}
@@ -74,6 +75,7 @@ describe SynapseIc::User do
         end
       
         it{should be_a(SynapseIc::Response)}
+        its(:error_code){should_not eq("0")}
         its(:error){should match(/Invalid SSN information/)}
       end
       
