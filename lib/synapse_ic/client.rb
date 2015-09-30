@@ -24,6 +24,10 @@ module SynapseIc
       request_kyc_action( oauth_key, url, info, fingerprint )
     end
 
+    def add_node( oauth_key, type, info = {}, fingerprint)
+      url = SynapseIc.base_url + "node/add"
+      request_node_action( oauth_key, url, type, info, fingerprint )
+    end
 private
 
     def payload_for_kyc( oauth_key, info, fingerprint )
@@ -31,6 +35,11 @@ private
       {login: {oauth_key: oauth_key}, user: user_doc}
     end
 
+    def payload_for_node( oauth_key, type, info, fingerprint )
+      node_info = {type: type, info: info}
+      {login: {oauth_key: oauth_key}, user: {fingerprint: fingerprint}, node: node_info}
+    end
+    
     def request_kyc_action(oauth_key, url, info, fingerprint )
       response = JSON.parse( Client.request( url, payload_for_kyc(oauth_key, info, fingerprint) ) )
 
@@ -41,5 +50,17 @@ private
       end
       out
     end
+    
+    def request_node_action(oauth_key, url, type, info, fingerprint )
+      response = JSON.parse( Client.request( url, payload_for_node(oauth_key, type, info, fingerprint) ) )
+
+      if response.has_key? "error"
+        out = Response.new( response )
+      else
+        out = Node.new( response['nodes'] )
+      end
+      out
+    end
+    
   end
 end
