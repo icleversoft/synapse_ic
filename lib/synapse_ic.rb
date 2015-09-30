@@ -6,6 +6,8 @@ require 'synapse_ic/response'
 require 'synapse_ic/resources/user'
 require 'synapse_ic/resources/oauth'
 require 'synapse_ic/resources/kyc'
+require 'synapse_ic/resources/question_set'
+require 'synapse_ic/resources/question'
 require 'synapse_ic/client'
 
 module SynapseIc

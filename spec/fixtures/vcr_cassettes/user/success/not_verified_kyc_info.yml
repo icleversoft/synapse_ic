@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.synapsepay.com/api/v3/user/doc/add
+    body:
+      encoding: UTF-8
+      string: '{"login":{"oauth_key":"9XrejAkBmzYpBwgKMigK8peO3ADXRyEdkE26i6Ct"},"user":{"doc":{"birth_day":4,"birth_month":2,"birth_year":1940,"name_first":"John","name_last":"doe","address_street1":"1
+        Infinate Loop","address_postal_code":"95014","address_country_code":"US","document_value":"3333","document_type":"SSN"},"fingerprint":"suasusau21324redakufejfjsf"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '352'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 202
+      message: ACCEPTED
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 30 Sep 2015 16:15:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Frame-Options:
+      - ALLOWALL
+    body:
+      encoding: UTF-8
+      string: '{"error_code": "10", "http_code": "202", "message": {"en": "SSN information
+        submitted. Please ask user to answer the attached questions and post them
+        to user/doc/verify"}, "question_set": {"created_at": 1443629728, "expired":
+        false, "id": "560c0aa036356600030004e8", "livemode": false, "object": "question_set",
+        "person_id": "560c0a9f36356600030004e7", "questions": [{"answers": [{"answer":
+        "Miranda", "id": 1}, {"answer": "Jason", "id": 2}, {"answer": "Julian", "id":
+        3}, {"answer": "Evan", "id": 4}, {"answer": "None Of The Above", "id": 5}],
+        "id": 1, "question": "Which one of the following adult individuals is most
+        closely associated with you?"}, {"answers": [{"answer": "Jasper", "id": 1},
+        {"answer": "Boone", "id": 2}, {"answer": "Niagara", "id": 3}, {"answer": "Nantucket",
+        "id": 4}, {"answer": "None Of The Above", "id": 5}], "id": 2, "question":
+        "Which one of the following counties is associated with you?"}, {"answers":
+        [{"answer": "309 Colver Rd", "id": 1}, {"answer": "467 Meridian Rd", "id":
+        2}, {"answer": "863 Carelton", "id": 3}, {"answer": "52 Canandaigua Rd", "id":
+        4}, {"answer": "None Of The Above", "id": 5}], "id": 3, "question": "Which
+        one of the following addresses is associated with you?"}, {"answers": [{"answer":
+        "605", "id": 1}, {"answer": "870", "id": 2}, {"answer": "832", "id": 3}, {"answer":
+        "812", "id": 4}, {"answer": "None Of The Above", "id": 5}], "id": 4, "question":
+        "Which one of the following area codes is associated with you?"}, {"answers":
+        [{"answer": "Idaho", "id": 1}, {"answer": "Oklahoma", "id": 2}, {"answer":
+        "Delaware", "id": 3}, {"answer": "Maine", "id": 4}, {"answer": "None Of The
+        Above", "id": 5}], "id": 5, "question": "What state was your SSN issued in?"}],
+        "score": null, "time_limit": 0, "updated_at": 1443629728}, "success": true}'
+    http_version: 
+  recorded_at: Wed, 30 Sep 2015 16:15:28 GMT
+recorded_with: VCR 2.9.3
