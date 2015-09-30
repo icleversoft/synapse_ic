@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.synapsepay.com/api/v3/user/doc/add
+    body:
+      encoding: UTF-8
+      string: '{"login":{"oauth_key":"x3XV8mJOIL7ldIk3mwgeVBUdpxV9CakMcjhltqnH"},"user":{"doc":{"birth_day":4,"birth_month":2,"birth_year":1940,"name_first":"John","name_last":"doe","address_street1":"1
+        Infinate Loop","address_postal_code":"95014","address_country_code":"US","document_value":"3333","document_type":"SSN"},"fingerprint":"suasusau21324redakufejfjsf"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '352'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 202
+      message: ACCEPTED
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 30 Sep 2015 19:44:18 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Frame-Options:
+      - ALLOWALL
+    body:
+      encoding: UTF-8
+      string: '{"error_code": "10", "http_code": "202", "message": {"en": "SSN information
+        submitted. Please ask user to answer the attached questions and post them
+        to user/doc/verify"}, "question_set": {"created_at": 1443642258, "expired":
+        false, "id": "560c3b923335350003000665", "livemode": false, "object": "question_set",
+        "person_id": "560c3b923635660003000687", "questions": [{"answers": [{"answer":
+        "Jason", "id": 1}, {"answer": "Nicole", "id": 2}, {"answer": "Evan", "id":
+        3}, {"answer": "Jose", "id": 4}, {"answer": "None Of The Above", "id": 5}],
+        "id": 1, "question": "Which one of the following adult individuals is most
+        closely associated with you?"}, {"answers": [{"answer": "Nantucket", "id":
+        1}, {"answer": "Jasper", "id": 2}, {"answer": "Schoharie", "id": 3}, {"answer":
+        "Niagara", "id": 4}, {"answer": "None Of The Above", "id": 5}], "id": 2, "question":
+        "Which one of the following counties is associated with you?"}, {"answers":
+        [{"answer": "605", "id": 1}, {"answer": "812", "id": 2}, {"answer": "832",
+        "id": 3}, {"answer": "336", "id": 4}, {"answer": "None Of The Above", "id":
+        5}], "id": 3, "question": "Which one of the following area codes is associated
+        with you?"}, {"answers": [{"answer": "902 Grass Lake Rd", "id": 1}, {"answer":
+        "430 Dwight", "id": 2}, {"answer": "123 Main St", "id": 3}, {"answer": "309
+        Colver Rd", "id": 4}, {"answer": "None Of The Above", "id": 5}], "id": 4,
+        "question": "Which one of the following addresses is associated with you?"},
+        {"answers": [{"answer": "49511", "id": 1}, {"answer": "49230", "id": 2}, {"answer":
+        "49532", "id": 3}, {"answer": "49557", "id": 4}, {"answer": "None Of The Above",
+        "id": 5}], "id": 5, "question": "Which one of the following zip codes is associated
+        with you?"}], "score": null, "time_limit": 0, "updated_at": 1443642258}, "success":
+        true}'
+    http_version: 
+  recorded_at: Wed, 30 Sep 2015 19:44:18 GMT
+recorded_with: VCR 2.9.3

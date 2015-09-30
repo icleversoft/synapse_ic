@@ -4,7 +4,9 @@ shared_context "shared configuration" do
                        client_secret: "11c94ba6bad74d24a0158bc707f0fc19a86dc08f"]}
   let(:environment){Hash[sandbox: "https://sandbox.synapsepay.com/api/v3/",
                          production: "https://synapsepay.com/api/v3/"]}
-                         
+
+  let(:oauth_key){"x3XV8mJOIL7ldIk3mwgeVBUdpxV9CakMcjhltqnH"}
+
   let(:valid_user) do
     Hash[logins: [{email:"test@domain.com", password: '123456', read_only: false}],
          phone_numbers: ["123-456-789"],
@@ -22,31 +24,29 @@ shared_context "shared configuration" do
       ]
   end
   
-  let(:success_kyc_info) do
-    Hash[birth_day: 4,
-    birth_month: 2,
-    birth_year: 1940,
-    name_first: "John",
-    name_last: "doe",
-    address_street1: "1 Infinate Loop",
-    address_postal_code: "95014",
-    address_country_code: "US",
-    document_value: "2222",
-    document_type: "SSN"]
-  end
-
-  let(:success_not_verified_kyc_info) do
-    Hash[birth_day: 4,
-    birth_month: 2,
-    birth_year: 1940,
-    name_first: "John",
-    name_last: "doe",
-    address_street1: "1 Infinate Loop",
-    address_postal_code: "95014",
-    address_country_code: "US",
-    document_value: "3333",
-    document_type: "SSN"]
+  let(:kyc_info) do
+    Hash[
+      birth_day: 4,
+      birth_month: 2,
+      birth_year: 1940,
+      name_first: "John",
+      name_last: "doe",
+      address_street1: "1 Infinate Loop",
+      address_postal_code: "95014",
+      address_country_code: "US",
+      document_value: "2222",
+      document_type: "SSN"
+    ]
   end
   
-  
+  let(:kyc_info_to_verify) do
+    Hash[
+      question_set_id: "560c0aa036356600030004e8",
+      answers: [
+        {question_id: 1, answer_id: 1},
+        {question_id: 2, answer_id: 2},
+        {question_id: 3, answer_id: 3}
+        ]
+      ]
+  end
 end

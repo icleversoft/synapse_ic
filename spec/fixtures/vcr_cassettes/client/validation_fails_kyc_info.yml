@@ -5,7 +5,7 @@ http_interactions:
     uri: https://sandbox.synapsepay.com/api/v3/user/doc/add
     body:
       encoding: UTF-8
-      string: '{"login":{"oauth_key":"9XrejAkBmzYpBwgKMigK8peO3ADXRyEdkE26i6Ct"},"user":{"doc":{"birth_day":4,"birth_month":2,"birth_year":1940,"name_first":"John","name_last":"doe","address_street1":"1
+      string: '{"login":{"oauth_key":"x3XV8mJOIL7ldIk3mwgeVBUdpxV9CakMcjhltqnH"},"user":{"doc":{"birth_day":4,"birth_month":2,"birth_year":1940,"name_first":"John","name_last":"doe","address_street1":"1
         Infinate Loop","address_postal_code":"95014","address_country_code":"US","document_value":"1111","document_type":"SSN"},"fingerprint":"suasusau21324redakufejfjsf"}}'
     headers:
       Accept:
@@ -26,7 +26,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 30 Sep 2015 07:28:00 GMT
+      - Wed, 30 Sep 2015 19:43:01 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -43,5 +43,5 @@ http_interactions:
         copy of passport/divers license via user/doc/attachments/add"}, "error_code":
         "400", "http_code": "409", "success": false}'
     http_version: 
-  recorded_at: Wed, 30 Sep 2015 07:28:00 GMT
+  recorded_at: Wed, 30 Sep 2015 19:43:01 GMT
 recorded_with: VCR 2.9.3
