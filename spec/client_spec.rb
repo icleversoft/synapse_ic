@@ -66,4 +66,32 @@ describe SynapseIc::Client do
       its("question_set.questions.first.answers"){should_not be_empty }
     end
   end
+  
+  context :node do
+    context :add_node do
+      context :ach_account_routing do
+        subject do
+          VCR.use_cassette("node/ach_account_routing") do
+            SynapseIc::Client.new.add_node( oauth_key, 'ACH-US', node_ach_routing, fingerprint )
+          end
+        end
+        its(:success){should be_truthy}
+        its(:error_code){should eq("0")}
+        it{should be_a SynapseIc::Node}
+        its(:node_type){is_expected.to eq("ACH-US")}
+        its(:allowed){is_expected.to match(/(CREDIT|CREDIT|CREDIT\-AND\-DEBIT)/)}
+
+        its(:account_num){should_not be_nil}
+        its(:account_num){should be_a String}
+        its("account_num.length"){should_not eq(0)}
+        
+        its(:class){is_expected.to be_a String}
+        its(:name_on_account){is_expected.to be_a String}
+        its(:nickname){is_expected.to be_a String}
+        its(:type){is_expected.to be_a String}
+        
+        
+      end
+    end
+  end
 end

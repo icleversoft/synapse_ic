@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.synapsepay.com/api/v3/node/add
+    body:
+      encoding: UTF-8
+      string: '{"login":{"oauth_key":"x3XV8mJOIL7ldIk3mwgeVBUdpxV9CakMcjhltqnH"},"user":{"fingerprint":"suasusau21324redakufejfjsf"},"node":{"type":"ACH-US","info":{"nickname":"Savings
+        Account","name_on_account":"Sankaet Pathak","account_num":"123567443","routing_num":"051000017","type":"PERSONAL","class":"CHECKING"}}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '305'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 01 Oct 2015 07:01:42 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Frame-Options:
+      - ALLOWALL
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"error_code": "0", "http_code": "200", "nodes": [{"_id": {"$oid":
+        "560cda5686c27325b2ecf372"}, "allowed": "CREDIT", "extra": {"supp_id": null},
+        "info": {"account_num": "7443", "class": "CHECKING", "name_on_account": "Sankaet
+        Pathak", "nickname": "Savings Account", "routing_num": "0017", "type": "PERSONAL"},
+        "is_active": true, "type": "ACH-US"}], "success": true}'
+    http_version: 
+  recorded_at: Thu, 01 Oct 2015 07:01:42 GMT
+recorded_with: VCR 2.9.3

@@ -49,4 +49,50 @@ shared_context "shared configuration" do
         ]
       ]
   end
+  
+  let(:node_synapse) do
+    Hash[ nickname: "Savings"]
+  end
+  
+  let(:node_ach_login) do
+    Hash[
+      bank_id: "synapse_nomfa",
+      bank_pw: "test1234",
+      bank_name: "bofa"
+      ]
+  end
+  
+  let(:node_ach_routing) do
+    Hash[
+      nickname: "Savings Account",
+      name_on_account: "Sankaet Pathak",
+      account_num: "123567443",
+      routing_num: "051000017",
+      type: "PERSONAL",
+      class: "CHECKING"
+      ]
+  end
+  
+  let(:node_wire_us) do
+    Hash[
+      nickname: "Some Account",
+      name_on_account: "Some Name",
+      account_num: "123567443",
+      bank_name: "Bank of America",
+      address: "452 Fifth Ave, NY"
+      ]
+  end
+  
+  let(:node_wire_int) do
+    Hash[
+      nickname: "Some Account",
+      name_on_account: "Some Name",
+      account_num: "123567443",
+      routing_num: "0260009593",
+      swift: "MRMD US 33",
+      bank_name: "Bank of America",
+      address: "452 Fifth Ave, NY"
+      ]
+  end
+  
 end
