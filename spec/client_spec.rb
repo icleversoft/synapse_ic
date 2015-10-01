@@ -75,23 +75,61 @@ describe SynapseIc::Client do
             SynapseIc::Client.new.add_node( oauth_key, 'ACH-US', node_ach_routing, fingerprint )
           end
         end
+        
         its(:success){should be_truthy}
         its(:error_code){should eq("0")}
         it{should be_a SynapseIc::Node}
-        its(:node_type){is_expected.to eq("ACH-US")}
-        its(:allowed){is_expected.to match(/(CREDIT|CREDIT|CREDIT\-AND\-DEBIT)/)}
 
-        its(:account_num){should_not be_nil}
-        its(:account_num){should be_a String}
-        its("account_num.length"){should_not eq(0)}
+        its(:node){is_expected.to be_a SynapseIc::SimpleNode}
+        its("node.node_id"){should_not be_nil}
+        its("node.node_id"){is_expected.to be_a String}
+        its("node.node_id"){should match(/[0-9a-f][0-9a-f]+/)}
         
-        its(:class){is_expected.to be_a String}
-        its(:name_on_account){is_expected.to be_a String}
-        its(:nickname){is_expected.to be_a String}
-        its(:type){is_expected.to be_a String}
+        its("node.node_type"){is_expected.to eq("ACH-US")}
+        its("node.allowed"){is_expected.to match(/(CREDIT|CREDIT|CREDIT\-AND\-DEBIT)/)}
+        its("node.active"){should be_truthy}
         
+        its("node.account_num"){should_not be_nil}
+        its("node.account_num"){should be_a String}
+        its("node.account_num.length"){should_not eq(0)}
         
+        its("node.class"){is_expected.to be_a String}
+        its("node.name_on_account"){is_expected.to be_a String}
+        its("node.nickname"){is_expected.to be_a String}
+        its("node.type"){is_expected.to be_a String}
       end
     end
+
+    context :verify_node do
+      subject do
+        VCR.use_cassette("node/verify") do
+          SynapseIc::Client.new.verify_node( oauth_key, fingerprint, node_identifier, ach_verifier )
+        end
+      end
+      
+      its(:success){should be_truthy}
+      its(:error_code){should eq("0")}
+      it{should be_a SynapseIc::Node}
+      its(:node){is_expected.to be_a SynapseIc::SimpleNode}
+      its("node.node_id"){should_not be_nil}
+    end
+
+    
+    context :list_nodes do
+      subject do
+        VCR.use_cassette("node/list") do
+          SynapseIc::Client.new.list_node( oauth_key, fingerprint )
+        end
+      end
+      
+      its(:success){should be_truthy}
+      its(:error_code){should eq("0")}
+      it{should be_a SynapseIc::NodeList}
+      its(:nodes){should be_a Array}
+      its("nodes.size"){should_not eq(0)}
+      its("nodes.first"){is_expected.to be_a SynapseIc::SimpleNode}
+    end
+    
+    
   end
 end

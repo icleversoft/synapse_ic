@@ -94,5 +94,8 @@ shared_context "shared configuration" do
       address: "452 Fifth Ave, NY"
       ]
   end
+
+  let(:node_identifier) {  "560cda5686c27325b2ecf372" }
   
+  let(:ach_verifier){ Hash[micro: [0.1, 0.1] ] }
 end

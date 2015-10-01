@@ -9,6 +9,8 @@ require 'synapse_ic/resources/kyc'
 require 'synapse_ic/resources/question_set'
 require 'synapse_ic/resources/question'
 require 'synapse_ic/resources/node'
+require 'synapse_ic/resources/node_list'
+require 'synapse_ic/resources/simple_node'
 require 'synapse_ic/client'
 
 module SynapseIc

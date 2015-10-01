@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.synapsepay.com/api/v3/node/show
+    body:
+      encoding: UTF-8
+      string: '{"login":{"oauth_key":"x3XV8mJOIL7ldIk3mwgeVBUdpxV9CakMcjhltqnH"},"user":{"fingerprint":"suasusau21324redakufejfjsf"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '118'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 01 Oct 2015 17:37:48 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept
+      X-Frame-Options:
+      - ALLOWALL
+      Strict-Transport-Security:
+      - max-age=63072000
+    body:
+      encoding: UTF-8
+      string: '{"error_code": "0", "http_code": "200", "node_count": 2, "nodes": [{"_id":
+        {"$oid": "560c34f586c273242bb9f6c1"}, "allowed": "CREDIT-AND-DEBIT", "extra":
+        {"supp_id": null}, "info": {"balance": {"amount": 10000.0, "currency": "USD"},
+        "nickname": "Default Synapse Node"}, "is_active": true, "type": "SYNAPSE-US"},
+        {"_id": {"$oid": "560cda5686c27325b2ecf372"}, "allowed": "CREDIT", "extra":
+        {"supp_id": null}, "info": {"account_num": "7443", "class": "CHECKING", "name_on_account":
+        "Sankaet Pathak", "nickname": "Savings Account", "routing_num": "0017", "type":
+        "PERSONAL"}, "is_active": true, "type": "ACH-US"}], "page": 1, "page_count":
+        1, "success": true}'
+    http_version: 
+  recorded_at: Thu, 01 Oct 2015 17:37:48 GMT
+recorded_with: VCR 2.9.3
