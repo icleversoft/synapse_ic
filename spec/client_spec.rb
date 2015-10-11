@@ -114,14 +114,12 @@ describe SynapseIc::Client do
       its("node.node_id"){should_not be_nil}
     end
 
-    
     context :list_nodes do
       subject do
         VCR.use_cassette("node/list") do
           SynapseIc::Client.new.list_node( oauth_key, fingerprint )
         end
       end
-      
       its(:success){should be_truthy}
       its(:error_code){should eq("0")}
       it{should be_a SynapseIc::NodeList}
@@ -129,7 +127,5 @@ describe SynapseIc::Client do
       its("nodes.size"){should_not eq(0)}
       its("nodes.first"){is_expected.to be_a SynapseIc::SimpleNode}
     end
-    
-    
   end
 end

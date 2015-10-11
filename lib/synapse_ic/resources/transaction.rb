@@ -1,17 +1,17 @@
 module SynapseIc
   class Transaction
     def initialize
-      @from = {}
-      @to = {}
+      @from = nil
+      @to = nil
       @amount = {}
       @extra = {}
     end
     
-    def from=(value={})
+    def from=(value)#SimpleNode
       @from = value
     end
     
-    def to=(value={})
+    def to=(value)#SimpleNode
       @to = value
     end
     

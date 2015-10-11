@@ -11,6 +11,7 @@ VCR.configure do |c|
   c.filter_sensitive_data("<CLIENT_SECRET>"){ENV['CLIENT_SECRET']}
 end
 RSpec.configure do |config|
+  p ENV['reset']
   config.before(:each) do
     @api_sandbox = "https://sandbox.synapsepay.com/api/v3/"
     @api_production = "https://synapsepay.com/api/v3/"
