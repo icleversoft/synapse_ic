@@ -20,7 +20,7 @@ describe SynapseIc::Client do
       end
       its(:error_code){should eq("0")}
       it{should be_a(SynapseIc::KYC)}
-      its(:message){should match(/SSN information verified/)}
+      its(:message){should match(/verified/)}
       its(:permission){should match(/RECEIVE/)}
       its(:question_set){is_expected.to be_nil}
       its("verify_required?"){is_expected.to be_falsey}
@@ -37,7 +37,7 @@ describe SynapseIc::Client do
   
       it{should be_a(SynapseIc::Response)}
       its(:error_code){should_not eq("0")}
-      its(:error){should match(/invalid SSN information/i)}
+      its(:error){should match(/unable/i)}
     end
     # 
     context :success_but_not_verified do
@@ -53,7 +53,6 @@ describe SynapseIc::Client do
       its(:success){is_expected.to be_truthy}
       its(:error_code){should_not eq("0")}
       its(:message){should_not be_empty}
-      its(:message){is_expected.to match(/and post them to user\/doc\/verify/)}
       its(:question_set){should_not eq(nil)}
       its(:question_set){should be_a(SynapseIc::QuestionSet)}
       its("verify_required?"){is_expected.to be_truthy}
