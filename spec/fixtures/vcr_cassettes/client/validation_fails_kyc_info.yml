@@ -26,7 +26,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 30 Sep 2015 19:43:01 GMT
+      - Mon, 16 Nov 2015 17:21:08 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,9 +39,9 @@ http_interactions:
       - ALLOWALL
     body:
       encoding: UTF-8
-      string: '{"error": {"en": "Invalid SSN information supplied. Please submit a
-        copy of passport/divers license via user/doc/attachments/add"}, "error_code":
-        "400", "http_code": "409", "success": false}'
+      string: '{"error": {"en": "Unable to verify document information. Please submit
+        a valid copy of passport/driver''s license."}, "error_code": "400", "http_code":
+        "409", "success": false}'
     http_version: 
-  recorded_at: Wed, 30 Sep 2015 19:43:01 GMT
+  recorded_at: Mon, 16 Nov 2015 17:21:08 GMT
 recorded_with: VCR 2.9.3

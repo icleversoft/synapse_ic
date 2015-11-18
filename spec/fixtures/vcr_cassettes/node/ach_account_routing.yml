@@ -26,7 +26,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 01 Oct 2015 17:34:38 GMT
+      - Mon, 16 Nov 2015 17:21:11 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -42,10 +42,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"error_code": "0", "http_code": "200", "nodes": [{"_id": {"$oid":
-        "560cda5686c27325b2ecf372"}, "allowed": "CREDIT", "extra": {"supp_id": null},
-        "info": {"account_num": "7443", "class": "CHECKING", "name_on_account": "Sankaet
-        Pathak", "nickname": "Savings Account", "routing_num": "0017", "type": "PERSONAL"},
-        "is_active": true, "type": "ACH-US"}], "success": true}'
+        "560cda5686c27325b2ecf372"}, "allowed": "CREDIT-AND-DEBIT", "extra": {"supp_id":
+        null}, "info": {"account_num": "7443", "class": "CHECKING", "name_on_account":
+        "Sankaet Pathak", "nickname": "Savings Account", "routing_num": "0017", "type":
+        "PERSONAL"}, "is_active": true, "type": "ACH-US"}], "success": true}'
     http_version: 
-  recorded_at: Thu, 01 Oct 2015 17:34:38 GMT
+  recorded_at: Mon, 16 Nov 2015 17:21:11 GMT
 recorded_with: VCR 2.9.3

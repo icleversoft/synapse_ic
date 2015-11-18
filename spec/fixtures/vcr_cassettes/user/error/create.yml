@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 30 Sep 2015 07:06:36 GMT
+      - Mon, 16 Nov 2015 17:21:16 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,9 +38,10 @@ http_interactions:
       - ALLOWALL
     body:
       encoding: UTF-8
-      string: '{"error": {"en": "KeyError: ''legal_names''. Explanation: Adding/Removing
+      string: '{"error": {"en": "Badly formatted payload. Please fix the payload and
+        try again. Error: KeyError: ''legal_names''. Explanation: Adding/Removing
         this key should resolve this error."}, "error_code": "200", "http_code": "400",
         "success": false}'
     http_version: 
-  recorded_at: Wed, 30 Sep 2015 07:06:36 GMT
+  recorded_at: Mon, 16 Nov 2015 17:21:16 GMT
 recorded_with: VCR 2.9.3

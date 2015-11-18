@@ -26,7 +26,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 30 Sep 2015 19:42:59 GMT
+      - Mon, 16 Nov 2015 17:21:06 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -41,13 +41,14 @@ http_interactions:
       - max-age=63072000
     body:
       encoding: UTF-8
-      string: '{"error_code": "0", "http_code": "200", "message": {"en": "SSN information
-        verified"}, "success": true, "user": {"_id": {"$oid": "560c34f586c273242bb9f6c0"},
-        "client": {"id": 844, "name": "SynapsePay*Sandbox"}, "extra": {"date_joined":
-        {"$date": 1443640565537}, "is_business": false, "supp_id": "122eddfgbeafrfvbbb"},
-        "is_hidden": false, "legal_names": ["Test User"], "logins": [{"email": "test1@synapsepay.com",
-        "read_only": false}], "permission": "RECEIVE", "phone_numbers": ["901.111.1111"],
-        "photos": []}}'
+      string: '{"error_code": "0", "http_code": "200", "message": {"en": "Document
+        information verified."}, "success": true, "user": {"_id": {"$oid": "560c34f586c273242bb9f6c0"},
+        "client": {"id": 844, "name": "SynapsePay*Sandbox"}, "doc_status": {"physical_doc":
+        "SUBMITTED|VALID", "virtual_doc": "SUBMITTED|VALID"}, "extra": {"date_joined":
+        {"$date": 1443640565537}, "extra_security": true, "is_business": false, "supp_id":
+        "122eddfgbeafrfvbbb"}, "is_hidden": false, "legal_names": ["Test User"], "logins":
+        [{"email": "test1@synapsepay.com", "read_only": false}], "permission": "RECEIVE",
+        "phone_numbers": ["901.111.1111"], "photos": [], "refresh_token": null}}'
     http_version: 
-  recorded_at: Wed, 30 Sep 2015 19:42:59 GMT
+  recorded_at: Mon, 16 Nov 2015 17:21:06 GMT
 recorded_with: VCR 2.9.3
